@@ -1,4 +1,4 @@
-# Rokmoln support-firecloud
+# https://github.com/rokmoln/support-firecloud Homebrew packages
 
 ## How do I install these formulae?
 
