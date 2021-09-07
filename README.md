@@ -13,4 +13,4 @@ Or `brew tap rokmoln/support-firecloud` and then `brew install <formula>`.
 
 ## Maintenance
 
-The formulas are maintained via https://github.com/rokmoln/support-firecloud/blob/master/Makefile-homebrew .
+The formulas are maintained via https://github.com/rokmoln/support-firecloud/blob/master/Makefile.homebrew .
