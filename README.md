@@ -1,10 +1,10 @@
-# https://github.com/rokmoln/support-firecloud Homebrew packages
+# ysoftwareab's Homebrew packages
 
 ## How do I install these formulae?
 
-`brew install rokmoln/support-firecloud/<formula>`
+`brew install ysoftwareab/y/<formula>`
 
-Or `brew tap rokmoln/support-firecloud` and then `brew install <formula>`.
+Or `brew tap ysoftwareab/y` and then `brew install <formula>`.
 
 ## Documentation
 
@@ -13,4 +13,4 @@ Or `brew tap rokmoln/support-firecloud` and then `brew install <formula>`.
 
 ## Maintenance
 
-The formulas are maintained via https://github.com/rokmoln/support-firecloud/blob/master/Makefile.homebrew .
+The formulas are maintained via https://github.com/ysoftwareab/yplatform/blob/master/Makefile.homebrew .
