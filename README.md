@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install ysoftwareab/y/<formula>`
+`brew install ysoftwareab/tap/<formula>`
 
-Or `brew tap ysoftwareab/y` and then `brew install <formula>`.
+Or `brew tap ysoftwareab/tap` and then `brew install <formula>`.
 
 ## Documentation
 
