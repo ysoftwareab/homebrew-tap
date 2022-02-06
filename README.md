@@ -14,3 +14,8 @@ Or `brew tap ysoftwareab/y` and then `brew install <formula>`.
 ## Maintenance
 
 The formulas are maintained via https://github.com/ysoftwareab/yplatform/blob/master/Makefile.homebrew .
+
+
+## License
+
+[UNLICENSE](UNLICENSE)
