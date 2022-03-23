@@ -1,10 +1,10 @@
-class Json < Formula
+class JsonAT9 < Formula
   require "language/node"
 
   desc "a 'json' command for massaging and processing JSON on the command line"
   homepage "https://trentm.com/json/"
-  url "https://registry.npmjs.org/json/-/json-11.0.0.tgz"
-  sha256 "cf9adea69034d7b05bf7a76604eed743d98579d4ccb368184c2594588d85cdc0"
+  url "https://registry.npmjs.org/json/-/json-9.0.6.tgz"
+  sha256 "6e8bfb5cbb7e7ee53231d3e3439b2ab1de58caed81b8abb30b9e1168e8ac01e2"
   license "MIT"
 
   livecheck do
