@@ -1,4 +1,4 @@
-class NodeAT1380 < Formula
+class NodeAT1830 < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
   url "https://nodejs.org/dist/v18.3.0/node-v18.3.0.tar.xz"
