@@ -12,6 +12,8 @@ class VscodeDevContainerCli < Formula
     regex(/["']version["']:\s*?["']([^"']+)["']/i)
   end
 
+  conflicts_with "devcontainers-cli", because: "both install a `devcontainer` executable"
+
   depends_on "node"
 
   def install
