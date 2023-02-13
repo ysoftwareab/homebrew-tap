@@ -3,8 +3,8 @@ class Semver < Formula
 
   desc "The semantic version parser used by npm"
   homepage "https://github.com/npm/node-semver"
-  url "https://registry.npmjs.org/semver/-/semver-7.3.5.tgz"
-  sha256 "af1f802439e20980a10b03c879fcc89921793f51b95252e805a8ba8079a6599e"
+  url "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz"
+  sha256 "6335adae62c368e61db516d4b9a5aa3cc1792322e0f50c71d9e8a50f8fab2d52"
   license "ISC"
 
   livecheck do
