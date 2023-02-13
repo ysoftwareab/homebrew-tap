@@ -3,8 +3,8 @@ class DevcontainersCli < Formula
 
   desc "Dev Containers CLI"
   homepage "https://code.visualstudio.com/docs/remote/devcontainer-cli"
-  url "https://registry.npmjs.org/@devcontainers/cli/-/cli-0.8.0.tgz"
-  sha256 "1dc10cb78de6b07499bd4cf84b040a35763729d36e1f7b0c9fbb560cc3e022e2"
+  url "https://registry.npmjs.org/@devcontainers/cli/-/cli-0.30.0.tgz"
+  sha256 "aec01a668552a48e24b7ecae5caca97d5a12950d3a19810450eedd265d120f06"
   license "MIT"
 
   livecheck do
