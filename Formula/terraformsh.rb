@@ -1,4 +1,4 @@
-class TerraformSh < Formula
+class Terraformsh < Formula
   desc "A wrapper for Terraform in Bash"
   homepage "https://github.com/pwillis-els/terraformsh"
   url "https://github.com/pwillis-els/terraformsh/archive/refs/tags/v0.13.tar.gz"
