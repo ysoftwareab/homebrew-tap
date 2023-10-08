@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# poetry-python 1.0
+## Use it as a shebang e.g. #!/usr/bin/env poetry-python
+## for a python script that requires its poetry dependencies
+
+SCRIPT_DIR="$(dirname $1)"
+SCRIPT="$(basename $1)"
+shift
+
+cd "${SCRIPT_DIR}"
+poetry run python "${SCRIPT}" "$@"
