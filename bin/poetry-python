@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# poetry-python 1.0
+# poetry-python 1.1
 ## Use it as a shebang e.g. #!/usr/bin/env poetry-python
 ## for a python script that requires its poetry dependencies
 
