@@ -9,5 +9,4 @@ SCRIPT_DIR="$(dirname $1)"
 SCRIPT="$(basename $1)"
 shift
 
-cd "${SCRIPT_DIR}"
-poetry run python "${SCRIPT}" "$@"
+poetry run -C "${SCRIPT_DIR}" -- python "${SCRIPT_DIR}/${SCRIPT}" "$@"
