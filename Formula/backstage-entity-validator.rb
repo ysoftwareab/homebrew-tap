@@ -21,7 +21,7 @@ class BackstageEntityValidator < Formula
   end
 
   test do
-    system "#{bin}/bev", "--help"
+    system "#{bin}/bev", "-h"
     assert_predicate testpath/"package.json", :exist?, "package.json must exist"
   end
 end
