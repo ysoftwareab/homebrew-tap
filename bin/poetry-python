@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# poetry-python 1.3
+# poetry-python 1.4
 ## Use it as a shebang e.g. #!/usr/bin/env poetry-python
 ## for a python script that requires its poetry dependencies
 
-SCRIPT_DIR="$(cd "$(dirname "$1")" >/dev/null && pwd)"
+SCRIPT_DIR="$(dirname $1)"
 SCRIPT="$(basename $1)"
 shift
 
-# https://github.com/python-poetry/poetry/issues/651#issuecomment-1261845967
-POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON="" poetry run -C "${SCRIPT_DIR}" -- python "${SCRIPT_DIR}/${SCRIPT}" "$@"
+if poetry --version | grep -q "^Poetry (version 1\."; then
+    # https://github.com/python-poetry/poetry/issues/651#issuecomment-1261845967
+    POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON="" poetry run --directory "$SCRIPT_DIR" -- python "${SCRIPT_DIR}/${SCRIPT}" "$@"
+else
+    # https://github.com/python-poetry/poetry/issues/651#issuecomment-1261845967
+    POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON="" poetry run --project "$SCRIPT_DIR" -- python "${SCRIPT_DIR}/${SCRIPT}" "$@"
+fi
