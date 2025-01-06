@@ -10,4 +10,4 @@ SCRIPT="$(basename $1)"
 shift
 
 # https://github.com/python-poetry/poetry/issues/651#issuecomment-1261845967
-POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON= poetry run -C "${SCRIPT_DIR}" -- python "${SCRIPT_DIR}/${SCRIPT}" "$@"
+POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON="" poetry run -C "${SCRIPT_DIR}" -- python "${SCRIPT_DIR}/${SCRIPT}" "$@"
