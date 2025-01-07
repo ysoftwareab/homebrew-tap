@@ -21,4 +21,8 @@ class Gita < Formula
     generate_completions_from_executable(libexec/"bin/register-python-argcomplete", "gita",
                                          shell_parameter_format: :arg)
   end
+
+  test do
+    system "#{bin}/gita", "--version"
+  end
 end
