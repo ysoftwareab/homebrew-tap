@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# poetry-python 1.6
+# poetry-python 1.7
 ## Use it as a shebang e.g. #!/usr/bin/env poetry-python
 ## for a python script that requires its poetry dependencies
 
@@ -9,10 +9,20 @@ SCRIPT_DIR="$(dirname $1)"
 SCRIPT="$(basename $1)"
 shift
 
+VIRTUAL_ENV_DIR="${SCRIPT_DIR}"
+while [[ "${VIRTUAL_ENV_DIR}" != "/" ]] && [[ ! -e "${VIRTUAL_ENV_DIR}/.venv" ]]; do
+    VIRTUAL_ENV_DIR="$(dirname "${VIRTUAL_ENV_DIR}")"
+done
+if [[ -e "${VIRTUAL_ENV_DIR}/.venv" ]]; then
+    export VIRTUAL_ENV="${VIRTUAL_ENV_DIR}/.venv"
+else
+    unset VIRTUAL_ENV
+fi
+
 if poetry --version | grep -q "^Poetry (version 1\."; then
     # https://github.com/python-poetry/poetry/issues/651#issuecomment-1261845967
-    POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON="" poetry run --directory "$SCRIPT_DIR" -- python "${SCRIPT_DIR}/${SCRIPT}" "$@"
+    POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON="" poetry run -- python "${SCRIPT_DIR}/${SCRIPT}" "$@"
 else
     # https://github.com/python-poetry/poetry/issues/651#issuecomment-1261845967
-    POETRY_VIRTUALENVS_USE_POETRY_PYTHON=true poetry run --project "$SCRIPT_DIR" -- python "${SCRIPT_DIR}/${SCRIPT}" "$@"
+    POETRY_VIRTUALENVS_USE_POETRY_PYTHON=true poetry run -- python "${SCRIPT_DIR}/${SCRIPT}" "$@"
 fi
