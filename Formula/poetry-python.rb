@@ -1,8 +1,8 @@
 class PoetryPython < Formula
   desc "A shebang for installing poetry deps before running a python script"
   homepage "https://github.com/ysoftwareab/homebrew-tap"
-  url "https://github.com/ysoftwareab/homebrew-tap/archive/refs/tags/poetry-python-1.6.tar.gz"
-  sha256 "bd81d365c6b40ffae8e932ec1481d6237dcdb35c39c0c2b08f6d4c631b4a9073"
+  url "https://github.com/ysoftwareab/homebrew-tap/archive/refs/tags/poetry-python-1.7.tar.gz"
+  sha256 "c9a396fb1f82807fd84ac2e35a543190b98eb9690eaa4c65061c6730af9496fa"
   license :public_domain
   head "https://github.com/ysoftwareab/homebrew-tap.git", branch: "master"
 
