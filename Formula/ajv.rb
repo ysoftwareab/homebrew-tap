@@ -20,7 +20,7 @@ class Ajv < Formula
   end
 
   test do
-    system "#{bin}/ajv", "--version"
+    system "#{bin}/ajv", "help"
     assert_predicate testpath/"package.json", :exist?, "package.json must exist"
   end
 end
