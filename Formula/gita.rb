@@ -3,8 +3,8 @@ class Gita < Formula
 
   desc "Manage many git repos with sanity 从容管理多个git库"
   homepage "https://github.com/nosarthur/gita"
-  url "https://github.com/nosarthur/gita/archive/refs/tags/v0.16.7.2.tar.gz"
-  sha256 "9ae73a3fda7cc242017f496ccc7494d18e2ccc1f1d82eed137a1f7d6c2b7de03"
+  url "https://github.com/nosarthur/gita/archive/refs/tags/v0.16.8.2.tar.gz"
+  sha256 "86e4c8f7a414afa0c2bcd5f3bb65f6df39730725138b6c51e39e34b2e2d4ee09"
   license "MIT"
   head "https://github.com/nosarthur/gita.git", branch: "master"
 
