@@ -1,0 +1,9 @@
+_extends: ysoftwareab/yplatform:repo/dot.github/settings.base.yml
+
+repository:
+  name: homebrew-tap
+  description: "https://github.com/ysoftwareab/yplatform 's Homebrew packages"
+
+collaborators:
+  - username: RobindeGrootNL
+    permission: push
