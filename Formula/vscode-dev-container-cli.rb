@@ -3,8 +3,8 @@ class VscodeDevContainerCli < Formula
 
   desc "Command Line Interface (CLI) for VS Code Dev Containers"
   homepage "https://code.visualstudio.com/docs/remote/devcontainer-cli"
-  url "https://registry.npmjs.org/@vscode/dev-container-cli/-/dev-container-cli-0.268.0.tgz"
-  sha256 "c6177f0ea63d0dbe56c45a5d665cd5cfddda451ea2387c9b10d0153a304382b0"
+  url "https://registry.npmjs.org/@vscode/dev-container-cli/-/dev-container-cli-0.292.0.tgz"
+  sha256 "a3c7ec6ba883083ca00958cfdfe68f41015608bf11a217c88f865caf28d936a6"
   license "CC-BY-4.0"
 
   livecheck do
