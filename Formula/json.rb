@@ -1,7 +1,7 @@
 class Json < Formula
   require "language/node"
 
-  desc "JSON command for massaging and processing JSON on the command-line"
+  desc "Command for massaging and processing JSON on the command-line"
   homepage "https://trentm.com/json/"
   url "https://registry.npmjs.org/json/-/json-11.0.0.tgz"
   sha256 "cf9adea69034d7b05bf7a76604eed743d98579d4ccb368184c2594588d85cdc0"

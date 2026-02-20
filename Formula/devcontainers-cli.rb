@@ -1,7 +1,7 @@
 class DevcontainersCli < Formula
   require "language/node"
 
-  desc "Dev Containers CLI"
+  desc "Development Containers CLI"
   homepage "https://code.visualstudio.com/docs/remote/devcontainer-cli"
   url "https://registry.npmjs.org/@devcontainers/cli/-/cli-0.83.2.tgz"
   sha256 "0f2a46140671dd7fc734662ed3628d5b942402f7bfb71ce1e2053117d7616085"
