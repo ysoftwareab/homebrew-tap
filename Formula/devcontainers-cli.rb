@@ -12,17 +12,17 @@ class DevcontainersCli < Formula
     regex(/["']version["']:\s*?["']([^"']+)["']/i)
   end
 
-  conflicts_with "vscode-dev-container-cli", because: "both install a `devcontainer` executable"
-
   depends_on "node"
 
+  conflicts_with "vscode-dev-container-cli", because: "both install a `devcontainer` executable"
+
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do
     system "#{bin}/devcontainer", "--help"
-    assert_predicate testpath/"package.json", :exist?, "package.json must exist"
+    assert_path_exists testpath/"package.json"
   end
 end

@@ -29,6 +29,8 @@ cat <<EOF > ${RB_FILE}
 # WARNING: DO NOT EDIT. AUTO-GENERATED CODE (${RB_FILE}.tpl)
 
 class ${ID} < Formula
+  desc "${DESC}"
+  homepage "${HOMEPAGE}"
   version "${VSN}"
 
   if OS.mac?
@@ -84,7 +86,7 @@ class ${ID} < Formula
   end
 
   test do
-    system "${TEST_CMD}"
+    system ${TEST_CMD}
   end
 end
 EOF

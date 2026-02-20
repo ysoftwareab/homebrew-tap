@@ -1,6 +1,8 @@
 # WARNING: DO NOT EDIT. AUTO-GENERATED CODE (./buildevents.rb.tpl)
 
 class Buildevents < Formula
+  desc "CLI for Honeycomb build events"
+  homepage "https://github.com/honeycombio/buildevents"
   version "0.18.0"
 
   if OS.mac?
@@ -56,6 +58,6 @@ class Buildevents < Formula
   end
 
   test do
-    system "#{bin}/buildevents -h"
+    system "#{bin}/buildevents", "-h"
   end
 end

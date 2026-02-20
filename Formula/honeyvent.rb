@@ -1,6 +1,8 @@
 # WARNING: DO NOT EDIT. AUTO-GENERATED CODE (./honeyvent.rb.tpl)
 
 class Honeyvent < Formula
+  desc "CLI for sending events to Honeycomb"
+  homepage "https://github.com/honeycombio/honeyvent"
   version "1.1.3"
 
   if OS.mac?
@@ -59,6 +61,6 @@ class Honeyvent < Formula
   end
 
   test do
-    system "#{bin}/honeyvent -h"
+    system "#{bin}/honeyvent", "-h"
   end
 end
