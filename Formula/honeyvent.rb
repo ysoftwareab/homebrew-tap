@@ -31,6 +31,9 @@ class Honeyvent < Formula
     end
   end
 
+  deprecate! date: "2025-05-14", because: :repo_archived
+  disable! date: "2026-05-14", because: :repo_archived
+
   def install
     if OS.mac?
       if Hardware::CPU.is_64_bit?
