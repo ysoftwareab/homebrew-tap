@@ -34,8 +34,6 @@ jobs:
       - run: brew test-bot --only-tap-syntax
 
       - run: brew test-bot --only-formulae
-        env:
-          HOMEBREW_TEST_BOT_SKIP_FORMULAE: json@9
         if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
