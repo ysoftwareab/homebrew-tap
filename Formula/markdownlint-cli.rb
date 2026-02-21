@@ -20,7 +20,7 @@ class MarkdownlintCli < Formula
   end
 
   test do
-    system "#{bin}/markdownlint-cli", "--version"
+    system "#{bin}/markdownlint", "--version"
     assert_predicate testpath/"package.json", :exist?, "package.json must exist"
   end
 end
