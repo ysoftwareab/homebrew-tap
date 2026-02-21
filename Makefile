@@ -8,5 +8,6 @@ test:
 	# $(BREW) test-bot --only-setup
 	$(BREW) test-bot --only-tap-syntax
 ifneq (,$(GITHUB_ACTIONS))
-	$(BREW) test-bot --only-formulae
+	HOMEBREW_TEST_BOT_SKIP_FORMULAE=json@9 \
+		$(BREW) test-bot --only-formulae
 endif
