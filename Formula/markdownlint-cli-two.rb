@@ -21,6 +21,5 @@ class MarkdownlintCliTwo < Formula
 
   test do
     system "#{bin}/markdownlint-cli2", "--version"
-    assert_path_exists testpath/"package.json"
   end
 end

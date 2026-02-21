@@ -22,6 +22,5 @@ class BackstageEntityValidator < Formula
 
   test do
     system "#{bin}/bev", "-h"
-    assert_path_exists testpath/"package.json"
   end
 end

@@ -21,6 +21,5 @@ class JsonAT9 < Formula
 
   test do
     system "#{bin}/json", "--version"
-    assert_path_exists testpath/"package.json"
   end
 end

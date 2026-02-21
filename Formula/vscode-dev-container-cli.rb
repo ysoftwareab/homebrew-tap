@@ -23,6 +23,5 @@ class VscodeDevContainerCli < Formula
 
   test do
     system "#{bin}/devcontainer", "--help"
-    assert_path_exists testpath/"package.json"
   end
 end

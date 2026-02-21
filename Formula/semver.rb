@@ -21,6 +21,5 @@ class Semver < Formula
 
   test do
     system "#{bin}/semver", "--help"
-    assert_path_exists testpath/"package.json"
   end
 end

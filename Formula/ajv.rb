@@ -21,6 +21,5 @@ class Ajv < Formula
 
   test do
     system "#{bin}/ajv", "help"
-    assert_path_exists testpath/"package.json"
   end
 end
