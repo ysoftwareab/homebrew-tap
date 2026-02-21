@@ -10,6 +10,6 @@ class Terraformsh < Formula
     bin.install "terraformsh"
   end
   test do
-    system "#{bin}/terraformsh", "-h"
+    assert_match "terraformsh v", shell_output("#{bin}/terraformsh -h", 1)
   end
 end
