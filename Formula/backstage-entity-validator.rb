@@ -16,11 +16,12 @@ class BackstageEntityValidator < Formula
 
   def install
     system "npm", "install", *std_npm_args
-    # bin.install_symlink Dir["#{libexec}/bin/*"]
+    bin.install_symlink Dir["#{libexec}/bin/*"]
+    # Kept for backward compatibility
     bin.install_symlink "#{libexec}/bin/validate-entity" => "backstage-entity-validator"
   end
 
   test do
-    system "#{bin}/bev", "-h"
+    system "#{bin}/validate-entity", "-h"
   end
 end
