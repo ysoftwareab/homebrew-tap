@@ -16,7 +16,7 @@ class JsonAT9 < Formula
 
   def install
     system "npm", "install", *std_npm_args
-    bin.install_symlink Dir["#{libexec}/bin/*"] unless ENV["HOMEBREW_TEST_BOT"]
+    bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do
