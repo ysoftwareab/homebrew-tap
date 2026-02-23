@@ -6,7 +6,10 @@ class Buildevents < Formula
   version "0.18.0"
 
   if OS.mac?
-    if Hardware::CPU.is_64_bit?
+    if Hardware::CPU.arm?
+      url "https://github.com/honeycombio/buildevents/releases/download/v0.18.0/buildevents-darwin-arm64"
+      sha256 "aec6252b26b86d0577fef0dd931445a7754a81c114ea1921a3b50103e1c787f3"
+    elsif Hardware::CPU.is_64_bit?
       url "https://github.com/honeycombio/buildevents/releases/download/v0.18.0/buildevents-darwin-amd64"
       sha256 "1c65dd04fe978d17ffd20387bd65288bb4d8979d3271143b576be90f38e699a7"
     else
@@ -35,7 +38,9 @@ class Buildevents < Formula
 
   def install
     if OS.mac?
-      if Hardware::CPU.is_64_bit?
+      if Hardware::CPU.arm?
+        bin.install "buildevents-darwin-arm64" => "buildevents"
+      elsif Hardware::CPU.is_64_bit?
         bin.install "buildevents-darwin-amd64" => "buildevents"
       else
         bin.install "buildevents-darwin-386" => "buildevents"

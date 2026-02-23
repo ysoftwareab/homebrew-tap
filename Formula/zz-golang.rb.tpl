@@ -34,7 +34,10 @@ class ${ID} < Formula
   version "${VSN}"
 
   if OS.mac?
-    if Hardware::CPU.is_64_bit?
+    if Hardware::CPU.arm?
+      url "$(get_asset_url darwin arm64)"
+      sha256 "$(get_asset_sha256 darwin arm64)"
+    elsif Hardware::CPU.is_64_bit?
       url "$(get_asset_url darwin amd64)"
       sha256 "$(get_asset_sha256 darwin amd64)"
     else
@@ -63,7 +66,9 @@ class ${ID} < Formula
 
   def install
     if OS.mac?
-      if Hardware::CPU.is_64_bit?
+      if Hardware::CPU.arm?
+        bin.install "$(get_bin darwin arm64)" => "${BIN}"
+      elsif Hardware::CPU.is_64_bit?
         bin.install "$(get_bin darwin amd64)" => "${BIN}"
       else
         bin.install "$(get_bin darwin 386)" => "${BIN}"
