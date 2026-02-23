@@ -16,10 +16,10 @@ class JsonAT9 < Formula
 
   def install
     system "npm", "install", *std_npm_args
-    bin.install_symlink Dir["#{libexec}/bin/*"]
+    bin.install_symlink "#{libexec}/bin/json" => "json@9"
   end
 
   test do
-    system "#{bin}/json", "--version"
+    system "#{bin}/json@9", "--version"
   end
 end
