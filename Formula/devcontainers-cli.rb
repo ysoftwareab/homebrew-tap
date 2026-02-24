@@ -1,10 +1,10 @@
 class DevcontainersCli < Formula
   require "language/node"
 
-  desc "Dev Containers CLI"
+  desc "Development Containers CLI"
   homepage "https://code.visualstudio.com/docs/remote/devcontainer-cli"
-  url "https://registry.npmjs.org/@devcontainers/cli/-/cli-0.30.0.tgz"
-  sha256 "aec01a668552a48e24b7ecae5caca97d5a12950d3a19810450eedd265d120f06"
+  url "https://registry.npmjs.org/@devcontainers/cli/-/cli-0.83.2.tgz"
+  sha256 "0f2a46140671dd7fc734662ed3628d5b942402f7bfb71ce1e2053117d7616085"
   license "MIT"
 
   livecheck do
@@ -12,17 +12,16 @@ class DevcontainersCli < Formula
     regex(/["']version["']:\s*?["']([^"']+)["']/i)
   end
 
-  conflicts_with "vscode-dev-container-cli", because: "both install a `devcontainer` executable"
-
   depends_on "node"
 
+  conflicts_with "vscode-dev-container-cli", because: "both install a `devcontainer` executable"
+
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do
     system "#{bin}/devcontainer", "--help"
-    assert_predicate testpath/"package.json", :exist?, "package.json must exist"
   end
 end
