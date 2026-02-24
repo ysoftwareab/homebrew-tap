@@ -4,7 +4,7 @@ set -euo pipefail
 BIN=buildevents
 DESC="CLI for Honeycomb build events"
 HOMEPAGE="https://github.com/honeycombio/buildevents"
-VSN=0.9.2
+VSN=0.18.0
 RELEASE_URL=https://github.com/honeycombio/buildevents/releases/download/v${VSN}
 TEST_CMD="#{bin}/${BIN}", "-h"
 
