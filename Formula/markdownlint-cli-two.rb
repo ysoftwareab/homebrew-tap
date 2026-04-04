@@ -3,8 +3,8 @@ class MarkdownlintCliTwo < Formula
 
   desc "Fast, flexible command-line interface for linting Markdown files"
   homepage "https://github.com/DavidAnson/markdownlint-cli2"
-  url "https://registry.npmjs.org/markdownlint-cli2/-/markdownlint-cli2-0.12.1.tgz"
-  sha256 "480c949c85742c44c48e83fc2595aaf50e0c7d2778d2da5a48bb5668d378b7f5"
+  url "https://registry.npmjs.org/markdownlint-cli2/-/markdownlint-cli2-0.21.0.tgz"
+  sha256 "3ff893617ece08d5fffea2451d758cfad7cee1b96e64d5d4585e06ffb97091c3"
   license "MIT"
 
   livecheck do
